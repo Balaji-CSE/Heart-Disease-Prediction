@@ -1,0 +1,21 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Heart Disease Prediction Result</h1>
+   
+    {% if result == "Absence" %}
+    <h1 style="color: red;">No Heart disease</h1><br>
+    <img src="{% static 'irisapp/good.jpg' %}" alt="My image" width="300" height="300">
+
+    {% endif %}
+
+    {% if result == "Presence" %}
+    <h1 style="color: red;">You have Heart disease , Consult Doctor</h1>
+    <img src="{% static 'irisapp/bad.jpg' %}" alt="My image">
+    {% endif %}
+</body>
+</html>
